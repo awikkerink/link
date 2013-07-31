@@ -2,4 +2,20 @@
 
 .vui-link {
 	color: @linkColour;
+	text-decoration: none;
+	cursor:pointer;
+}
+
+.vui-link:hover, 
+.vui-link:focus {
+	color: @linkColourHover;
+	text-decoration: underline;
+}
+
+a:focus {
+	// Default
+  outline: thin dotted #333;
+  // Webkit
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
 }
