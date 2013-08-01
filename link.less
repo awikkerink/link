@@ -12,10 +12,16 @@
 	text-decoration: underline;
 }
 
-a:focus {
-	// Default
-  outline: thin dotted #333;
-  // Webkit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+.vui-link-main,
+.vui-link-main:visited {
+	color: @linkColourMain;
+	font-weight: bold;
+}
+.vui-link-main:hover,
+.vui-link-main:focus {
+	color: @linkColourMainHover;
+}
+
+.vui-outline:focus {
+	outline: 2px solid @linkColourOutlineFocus;
 }
