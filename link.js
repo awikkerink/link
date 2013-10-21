@@ -1,59 +1,57 @@
 ﻿(function ($) {
 
-    $.widget('vui.vui_link', {
+	$.widget( 'vui.vui_link', {
 
-        _create: function () {
+		_create: function () {
 
-            var $node = $(this.element);
+			var $node = $( this.element );
 
-            var offscreenText = $node.children('.vui-offscreen').text();
-            var title = $node.prop('title');
-            var hasTitle = title !== undefined && title.length > 0;
+			var offscreenText = $node.children('.vui-offscreen').text();
+			var title = $node.prop('title');
+			var hasTitle = title !== undefined && title.length > 0;
 
-            if (offscreenText.length > 0 && !hasTitle) {
-                this.element.data('autoUpdateTitleWithText', true);
-                $node.prop('title', offscreenText);
-            }
+			if( offscreenText.length > 0 && !hasTitle ) {
+				this.element.data( 'autoUpdateTitleWithText', true );
+				$node.prop( 'title', offscreenText );
+			}
 
-        },
+		},
 
-        getText: function () {
+		getText: function () {
 
-            var $node = $(this.element);
+			var $node = $( this.element );
 
-            var text;
+			var text = $node.text().trim();
+			return text;
 
-            text = $node.text().trim();
-            return text;
+		},
 
-        },
+		setText: function (text) {
 
-        setText: function (text) {
+			if( this.element.data('autoUpdateTitleWithText') ) {
+				this.element.prop( 'title', text );
+			}
 
-            if (this.element.data('autoUpdateTitleWithText')) {
-                this.element.prop('title', text);
-            }
+			var offscreen = this.element.children('.vui-offscreen');
+			if( offscreen.length === 1 ) {
+				$( offscreen[0] ).text( text );
+				return;
+			}
 
-            var offscreen = this.element.children('.vui-offscreen');
-            if (offscreen.length === 1) {
-                $(offscreen[0]).text(text);
-                return;
-            }
+			this.element.contents().filter( function () {
+					return this.nodeType === 3;
+				} ).remove();
+			this.element.append( document.createTextNode( text ) );
 
-            this.element.contents().filter(function () {
-                return this.nodeType === 3;
-            }).remove();
-            this.element.append(document.createTextNode(text));
+		}
 
-        }
+	});
 
-    });
-
-    vui.addClassInitializer(
+	vui.addClassInitializer(
 			'vui-link',
-			function (node) {
-                $(node).vui_link();
+			function( node ) {
+				$( node ).vui_link();
 			}
 		);
 
-})(window.jQuery);
+})( window.jQuery );
