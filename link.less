@@ -13,11 +13,12 @@
 	text-decoration: underline;
 }
 
+.vui-link:focus {
+	.focusOutline();
+	outline-offset: 1px;
+}
+
 .vui-link-main,
 .vui-link-main:visited {
 	font-weight: bold;
-}
-
-.vui-outline:focus, .vui-outline-force {
-	outline: 2px solid @linkColourOutlineFocus;
 }
