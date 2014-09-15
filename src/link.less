@@ -1,0 +1,24 @@
+@import '../../core/core';
+
+.vui-link,
+.vui-link:visited {
+	color: @linkColour;
+	text-decoration: none;
+	cursor:pointer;
+}
+
+.vui-link:hover,
+.vui-link:focus {
+	color: @linkColourHover;
+	text-decoration: underline;
+}
+
+.vui-link:focus {
+	.focusOutline();
+	outline-offset: 1px;
+}
+
+.vui-link-main,
+.vui-link-main:visited {
+	font-weight: bold;
+}
