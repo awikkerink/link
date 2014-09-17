@@ -4,7 +4,6 @@
 	.vui-link();
 }
 
-.vui-link-main,
-.vui-link-main:visited {
-	font-weight: bold;
+.vui-link-main {
+	.vui-linkMain();
 }
