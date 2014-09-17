@@ -1,0 +1,10 @@
+@import 'link';
+
+.vui-link {
+	.vui-link();
+}
+
+.vui-link-main,
+.vui-link-main:visited {
+	font-weight: bold;
+}
