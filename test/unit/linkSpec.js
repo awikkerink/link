@@ -37,7 +37,7 @@
 		} );
 
 		it( 'applies the correct color', function() {
-			expect( node ).toHaveRgbColor( 'rgb(0, 97, 127)' );
+			expect( node ).toHaveColor( 'rgb(0, 97, 127)' );
 		} );
 
 		it( 'applies text-decoration to not have underline', function() {
