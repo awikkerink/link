@@ -1,5 +1,6 @@
-lib/
-node_modules/
-output/test/
 deplui.sublime-project
 deplui.sublime-workspace
+dist/
+lib/
+node_modules/
+output/
