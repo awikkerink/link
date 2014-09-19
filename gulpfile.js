@@ -10,7 +10,7 @@ gulp.task( 'css', [ 'less-dependencies' ], function () {
 } );
 
 gulp.task( 'less-dependencies', function () {
-	return gulp.src( 'node_modules/vui-focus/dist/*.less' )
+	return gulp.src( 'node_modules/vui-focus/src/*.less' )
 		.pipe( gulp.dest( 'lib/' ) );
 } );
 
