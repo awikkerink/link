@@ -1,19 +1,19 @@
 @import '../lib/focus.less';
 
-@linkDefaultColourHover: #007795;
-@linkDefaultColour: #00617F;
+@vui-linkColor: #00617F;
+@vui-linkColorHover: #007795;
 
 .vui-link( 
-		@linkColour: @linkDefaultColour, 
-		@linkColourHover: @linkDefaultColourHover 
+		@colour: @vui-linkColor, 
+		@colourHover: @vui-linkColorHover
 	) {
 	&, &:visited {
-		color: @linkColour;
+		color: @colour;
 		text-decoration: none;
 		cursor:pointer;
 	}
 	&:hover, &:focus {
-		color: @linkColourHover;
+		color: @colourHover;
 		text-decoration: underline;
 	}
 	&:focus {
