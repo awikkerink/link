@@ -4,16 +4,16 @@
 @vui-linkColorHover: #007795;
 
 .vui-link( 
-		@colour: @vui-linkColor, 
-		@colourHover: @vui-linkColorHover
+		@color: @vui-linkColor, 
+		@colorHover: @vui-linkColorHover
 	) {
 	&, &:visited {
-		color: @colour;
+		color: @color;
 		text-decoration: none;
 		cursor:pointer;
 	}
 	&:hover, &:focus {
-		color: @colourHover;
+		color: @colorHover;
 		text-decoration: underline;
 	}
 	&:focus {
