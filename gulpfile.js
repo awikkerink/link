@@ -5,13 +5,8 @@ gulp.task( 'clean', function() {
 	return vui.clean( [ 'dist/**/*', 'lib', 'output' ] );
 } );
 
-gulp.task( 'css', [ 'less-dependencies' ], function () {
+gulp.task( 'css', function () {
 	return vui.makeCss( 'src/**/*.style', 'dist/' );
-} );
-
-gulp.task( 'less-dependencies', function () {
-	return gulp.src( 'node_modules/vui-focus/src/*.less' )
-		.pipe( gulp.dest( 'lib/' ) );
 } );
 
 gulp.task( 'less', function () {
