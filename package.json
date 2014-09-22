@@ -3,6 +3,7 @@
   "description": "Valence.UI LESS mixins and CSS for applying link styles",
   "version": "0.0.0",
   "author": "D2L Incorporated",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "ssh://git@git.dev.d2l:7999/val/link.git"
