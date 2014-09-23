@@ -11,29 +11,39 @@ Install as a development dependency:
 npm install --save-dev vui-link
 ```
 
+Import the library into your LESS file:
+
+```css
+@import 'node_modules/vui-link/dist/link'
+```
+
 ##LESS Mixins
 
-To apply link styling to an element, apply the `vui-link` mixin to the CSS
+To apply link styling to an element, apply the `vui-link` mixin to any CSS
 selector in your LESS file:
 
-    @import 'node_modules/vui-link/dist/link'
-    
-    .myLink {
-      vui-link();
-    }
+```css
+a {
+  .vui-link();
+}
 
 The color and hover colors can also be overriden:
 
-    vui-link( '#ff0000', '#0000ff' );
+```css
+.vui-link( '#ff0000', '#0000ff' );
+```
 
 These colors are also exposed as variables, which can be referenced:
 
-    .myLink {
-      color: @vui-linkColor;
-    }
-    .myLink:hover, .myLink:focus {
-    	color: #vui-linkColorHover;
-    }
+```css
+.myLink {
+  color: @vui-linkColor;
+}
+
+.myLink:hover, .myLink:focus {
+  color: #vui-linkColorHover;
+}
+```
 
 ##CSS
 
@@ -41,7 +51,9 @@ If you'd prefer to use CSS, bundle up the provided `link.css` file with
 your application's CSS. Then apply the `vui-link` CSS class to elements you
 wish to style link links.
 
-    <a class="vui-link">link text</a>
+```css
+<a class="vui-link">link text</a>
+```
 
 ##Building
 
