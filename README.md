@@ -11,13 +11,13 @@ Install as a development dependency:
 npm install --save-dev vui-link
 ```
 
-Import the library into your LESS file:
+##LESS Mixins
+
+First import the library into your LESS file:
 
 ```css
 @import 'node_modules/vui-link/dist/link'
 ```
-
-##LESS Mixins
 
 To apply link styling to an element, apply the `vui-link` mixin to any CSS
 selector in your LESS file:
