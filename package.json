@@ -9,8 +9,8 @@
     "url": "ssh://git@git.dev.d2l:7999/val/link.git"
   },
   "devDependencies": {
-    "vui-focus": "0.0.1",
-    "vui-helpers": "0.0.2",
+    "vui-focus": "^0.0.1",
+    "vui-helpers": "^0.0.2",
     "gulp": "^3.8.8"
   }
 }
