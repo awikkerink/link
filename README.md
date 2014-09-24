@@ -26,6 +26,7 @@ selector in your LESS file:
 a {
   .vui-link();
 }
+```
 
 The color and hover colors can also be overriden:
 
