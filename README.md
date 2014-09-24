@@ -34,7 +34,7 @@ The color and hover colors can also be overriden:
 .vui-link( '#ff0000', '#0000ff' );
 ```
 
-These colors are also exposed as variables, which can be referenced:
+These colors are also exposed as variables, which can be referenced in your LESS:
 
 ```css
 .myLink {
@@ -42,7 +42,7 @@ These colors are also exposed as variables, which can be referenced:
 }
 
 .myLink:hover, .myLink:focus {
-  color: #vui-linkColorHover;
+  color: @vui-linkColorHover;
 }
 ```
 
