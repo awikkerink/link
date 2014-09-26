@@ -1,7 +1,6 @@
 deplui.sublime-project
 deplui.sublime-workspace
-dist/
-lib/
+css/
 node_modules/
 output/
 npm-debug.log
