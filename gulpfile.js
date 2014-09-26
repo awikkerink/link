@@ -10,12 +10,8 @@ gulp.task( 'css', function () {
 	return vui.makeCss( 'src/**/*.style', 'dist/' );
 } );
 
-gulp.task( 'less', function () {
-	return vui.makeLess( 'src/**/*.less', 'dist/' );
-} );
-
 gulp.task( 'default', [ 'clean' ], function() {
-	gulp.start( 'css', 'less' );
+	gulp.start( 'css' );
 } );
 
 gulp.task( 'test', function () {

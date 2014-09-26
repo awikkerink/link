@@ -3,6 +3,6 @@
 .npmignore
 output
 node_modules
-src
+src/link.style
 test
 gulpfile.js
