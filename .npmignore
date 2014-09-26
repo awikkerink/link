@@ -1,7 +1,6 @@
 .gitattributes
 .gitignore
 .npmignore
-output
 node_modules
 test
 gulpfile.js

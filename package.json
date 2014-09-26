@@ -1,7 +1,7 @@
 {
   "name": "vui-link",
   "description": "Valence.UI LESS mixins and CSS for applying link styles",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "D2L Incorporated",
   "license": "Apache-2.0",
   "repository": {
@@ -12,10 +12,10 @@
     "test": "gulp && gulp test"
   },
   "dependencies": {
-    "vui-focus": "^0.0.4"
+    "vui-focus": "^0.0.5"
   },
   "devDependencies": {
-    "vui-helpers": "^0.0.7",
+    "vui-helpers": "^0.1.1",
     "gulp": "^3.8.8"
   }
 }
