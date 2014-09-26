@@ -8,6 +8,9 @@
     "type": "git",
     "url": "ssh://git@git.dev.d2l:7999/val/link.git"
   },
+  "scripts": {
+    "test": "gulp && gulp test"
+  },
   "dependencies": {
     "vui-focus": "^0.0.1",
   },
