@@ -16,7 +16,7 @@ npm install --save-dev vui-link
 First import the library into your LESS file:
 
 ```css
-@import 'node_modules/vui-link/src/link'
+@import 'node_modules/vui-link/link'
 ```
 
 To apply link styling to an element, apply the `vui-link` mixin to any CSS
