@@ -1,6 +1,6 @@
 {
   "name": "vui-link",
-  "description": "Valence.UI LESS mixins and CSS for applying link styles",
+  "description": "LESS mixins and CSS for applying link styles",
   "version": "0.0.5",
   "author": "D2L Corporation",
   "license": "Apache-2.0",
