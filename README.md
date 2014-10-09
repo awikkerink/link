@@ -19,19 +19,22 @@ First import the library into your LESS file:
 @import 'node_modules/vui-link/link'
 ```
 
-To apply link styling to an element, apply the `vui-link` mixin to any CSS
+To apply link styling to an element, apply the `#vui.link` mixin to any CSS
 selector in your LESS file:
 
 ```css
 a {
-  .vui-link();
+  #vui.link();
 }
 ```
 
-The color and hover colors can also be overriden:
+The color and focus colors can also be overriden:
 
 ```css
-.vui-link( '#ff0000', '#0000ff' );
+#vui.link( 
+  @color: '#ff0000', 
+  @colorFocus: '#0000ff' 
+);
 ```
 
 These colors are also exposed as variables, which can be referenced in your LESS:
@@ -42,7 +45,7 @@ These colors are also exposed as variables, which can be referenced in your LESS
 }
 
 .myLink:hover, .myLink:focus {
-  color: @vui-linkColorHover;
+  color: @vui-linkColorFocus;
 }
 ```
 
