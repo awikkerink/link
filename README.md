@@ -31,9 +31,9 @@ a {
 The color and focus colors can also be overriden:
 
 ```css
-#vui.link( 
-  @color: '#ff0000', 
-  @colorFocus: '#0000ff' 
+#vui.link(
+  @color: '#ff0000',
+  @colorFocus: '#0000ff'
 );
 ```
 
@@ -79,3 +79,9 @@ To test using Karma:
 ```shell
 gulp test
 ```
+
+## Contributing
+
+### Code Style
+
+This repository is configured with [EditorConfig](http://editorconfig.org) rules and contributions should make use of them. See the valence-ui [Code Style wiki page](https://github.com/Desire2Learn-Valence/valence-ui-helpers/wiki/Code-Style) for details.
