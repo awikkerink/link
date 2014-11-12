@@ -1,17 +1,17 @@
 @import 'node_modules/vui-focus/focus';
 
-@vui-linkColor: #00617F;
-@vui-linkColorFocus: #007795;
-@vui-linkTextDecoration: none;
-@vui-linkTextDecorationFocus: underline;
+@vui-link-color: #00617F;
+@vui-link-color-focus: #007795;
+@vui-link-textDecoration: none;
+@vui-link-textDecoration-focus: underline;
 
 #vui {
 
-	.link( 
-			@color: @vui-linkColor, 
-			@colorFocus: @vui-linkColorFocus,
-			@textDecoration: @vui-linkTextDecoration,
-			@textDecorationFocus: @vui-linkTextDecorationFocus
+	.link(
+			@color: @vui-link-color,
+			@color-focus: @vui-link-color-focus,
+			@textDecoration: @vui-link-textDecoration,
+			@textDecoration-focus: @vui-link-textDecoration-focus
 		) {
 		&, &:visited, &:link, &:active {
 			color: @color;
@@ -19,15 +19,15 @@
 			cursor:pointer;
 		}
 		&:hover, &:focus {
-			color: @colorFocus;
-			text-decoration: @textDecorationFocus;
+			color: @color-focus;
+			text-decoration: @textDecoration-focus;
 		}
 		&:focus {
-			#vui.focusOutline( @outlineOffset: 1px );
+			#vui.focus-outline( @offset: 1px );
 		}
 	}
 
-	.linkMain() {
+	.link-main() {
 		&, &:visited {
 			font-weight: bold;
 		}
