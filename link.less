@@ -2,19 +2,24 @@
 
 @vui-link-color: #00617F;
 @vui-link-color-focus: #007795;
+@vui-link-fontWeight: normal;
 @vui-link-textDecoration: none;
 @vui-link-textDecoration-focus: underline;
 
+@vui-mainLink-fontWeight: bold;
+
 #vui {
 
-	.link(
+	.Link(
 			@color: @vui-link-color,
 			@color-focus: @vui-link-color-focus,
+			@fontWeight: @vui-link-fontWeight,
 			@textDecoration: @vui-link-textDecoration,
 			@textDecoration-focus: @vui-link-textDecoration-focus
 		) {
 		&, &:visited, &:link, &:active {
 			color: @color;
+			font-weight: @fontWeight;
 			text-decoration: @textDecoration;
 			cursor:pointer;
 		}
@@ -23,14 +28,22 @@
 			text-decoration: @textDecoration-focus;
 		}
 		&:focus {
-			#vui.focus-outline( @offset: 1px );
+			#vui.focusOutline( @offset: 1px );
 		}
 	}
 
-	.link-main() {
-		&, &:visited {
-			font-weight: bold;
+	.Link {
+
+		.main(
+				@fontWeight: @vui-mainLink-fontWeight
+			) {
+
+			&, &:visited {
+				font-weight: @fontWeight;
+			}
+
 		}
+
 	}
 
 }
