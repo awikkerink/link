@@ -6,18 +6,12 @@
 		var node;
 
 		beforeEach( function () {
-
 			jasmine.addMatchers( vui.jasmine.dom.matchers );
-
 			node = document.body.appendChild( document.createElement( 'a' ) );
-			node.className = 'vui-link';
-
 		} );
 
 		afterEach( function() {
-
 			document.body.removeChild( node );
-
 		} );
 
 		it( 'defines a "vui-link" selector', function() {
@@ -36,23 +30,33 @@
 			expect( document ).toHaveCssSelector( '.vui-link-main' );
 		} );
 
-		it( 'applies the correct color', function() {
-			expect( node ).toHaveColor( 'rgb(0, 97, 127)' );
-		} );
+		describe( 'normal', function() {
 
-		it( 'applies text-decoration to not have underline', function() {
-			expect( node ).toHaveTextDecoration( 'none' );
+			beforeEach( function () {
+				node.className = 'vui-link';
+			} );
+
+			it( 'has the correct color', function() {
+				expect( node ).toHaveColor( 'rgb(0, 97, 127)' );
+			} );
+
+			it( 'has font-weight normal', function() {
+				expect( node ).toHaveFontWeight( 'normal' );
+			} );
+
+			it( 'has text-decoration of no underline', function() {
+				expect( node ).toHaveTextDecoration( 'none' );
+			} );
+
 		} );
 
 		describe( 'main', function() {
 
 			beforeEach( function () {
-
-				node.className = 'vui-link-main';
-
+				node.className = 'vui-link vui-link-main';
 			} );
 
-			it( 'applies font-weight to be bold', function() {
+			it( 'has font-weight bold', function() {
 				expect( node ).toHaveFontWeight( 'bold' );
 			} );
 
