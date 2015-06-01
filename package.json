@@ -1,27 +1,45 @@
 {
   "name": "vui-link",
-  "description": "LESS mixins and CSS for applying link styles",
-  "version": "0.4.0",
-  "author": "D2L Corporation",
-  "license": "Apache-2.0",
+  "version": "0.5.0",
+  "description": "Mixins and CSS for applying link styles",
+  "scripts": {
+    "clean": "rimraf link.css && rimraf link-less.css",
+    "lint:css": "csslint link.css",
+    "prebuild": "npm run clean",
+    "build:less": "lessc link.css.less > link-less.css",
+    "build:sass": "node-sass --output-style expanded link.css.scss link.css",
+    "build": "npm run build:sass && npm run build:less",
+    "postbuild": "npm run lint:css",
+    "pretest": "npm run build",
+    "test": "karma start karma.conf.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Brightspace/valence-ui-link.git"
-  },
-  "scripts": {
-    "test": "gulp && gulp test"
-  },
-  "dependencies": {
-    "vui-focus": "^0.5.0"
-  },
-  "devDependencies": {
-    "del": "^0.1.3",
-    "gulp": "^3.8.8",
-    "vui-helpers": "^0.5.0"
   },
   "keywords": [
     "d2l",
     "valence-ui",
     "vui"
-  ]
+  ],
+  "author": "D2L Corporation",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Brightspace/valence-ui-link/issues"
+  },
+  "homepage": "https://github.com/Brightspace/valence-ui-link",
+  "dependencies": {
+    "vui-focus": "^0.6.0"
+  },
+  "devDependencies": {
+    "csslint": "^0.10.0",
+    "jasmine-dom-matchers": "^0.1.0",
+    "karma": "^0.12.32",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-jasmine": "^0.3.5",
+    "karma-cli": "0.0.4",
+    "less": "^2.5.1",
+    "node-sass": "^3.1.1",
+    "rimraf": "^2.3.4"
+  }
 }
