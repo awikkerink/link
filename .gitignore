@@ -1,6 +1,4 @@
-deplui.sublime-project
-deplui.sublime-workspace
 node_modules/
 test/output
 link.css
-npm-debug.log
+link-less.css
