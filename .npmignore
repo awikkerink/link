@@ -6,6 +6,4 @@
 node_modules
 karma.conf.js
 test
-link.css.less
 link.css.scss
-link-less.css
