@@ -3,7 +3,7 @@
   "main": "link.scss",
   "license": "Apache-2.0",
   "dependencies": {
-    "vui-focus": "~0.7.1"
+    "vui-colors": "^0.0.5"
   },
   "ignore": [
     ".editorconfig",

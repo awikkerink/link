@@ -37,7 +37,7 @@
 			} );
 
 			it( 'has the correct color', function() {
-				expect( node ).toHaveColor( 'rgb(0, 97, 127)' );
+				expect( node ).toHaveColor( 'rgb(0, 111, 191)' );
 			} );
 
 			it( 'has font-weight normal', function() {
