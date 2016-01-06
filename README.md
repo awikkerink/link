@@ -6,6 +6,40 @@
 
 This component contains Sass mixins and CSS that you can use to style links.
 
+## Installation
+
+Install from NPM:
+```shell
+npm install vui-link
+```
+
+Install from Bower:
+```shell
+bower install vui-link
+```
+
+## Usage
+
+**Import the mixins:**
+
+```scss
+@import 'bower_components/vui-link/link.scss'; // or...
+
+@import "node_modules/vui-link/link.scss";
+```
+
+**Links:** 
+
+```scss
+.app {
+
+	a {
+		@include vui-link;
+	}
+
+}
+```
+
 For further information on this component and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
 #### Coding styles
