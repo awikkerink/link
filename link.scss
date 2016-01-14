@@ -1,13 +1,13 @@
 @import 'bower_components/vui-colors/colors.scss';
 
-@mixin vui-link() {
+@mixin vui-link($font-weight: normal) {
 
 	&,
 	&:visited,
 	&:link,
 	&:active {
 		color: $vui-color-celestine;
-		font-weight: normal;
+		font-weight: $font-weight;
 		text-decoration: none;
 		cursor: pointer;
 	}
@@ -22,13 +22,6 @@
 
 @mixin vui-link-main() {
 
-	@include vui-link;
-
-	&,
-	&:visited,
-	&:link,
-	&:active {
-		font-weight: 700;
-	}
+	@include vui-link($font-weight: 700);
 
 }
