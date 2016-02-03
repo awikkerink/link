@@ -1,4 +1,4 @@
-@import 'link';
+@import 'link.scss';
 
 .vui-link {
 	@include vui-link;
@@ -6,4 +6,8 @@
 
 .vui-link-main {
 	@include vui-link-main;
+}
+
+.vui-link-focus {
+	@include _vui-link-focus;
 }
