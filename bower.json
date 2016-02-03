@@ -3,15 +3,16 @@
   "main": "link.scss",
   "license": "Apache-2.0",
   "dependencies": {
-    "vui-colors": "^0.2.0"
+    "vui-colors": "^0.2.0",
+    "vui-typography": "~2.0.0"
   },
   "ignore": [
+    "test",
     ".editorconfig",
     ".gitattributes",
     ".gitignore",
     ".npmignore",
     ".travis.yml",
-    "karma.conf.js",
     "package.json"
   ]
 }

@@ -1,5 +1,13 @@
 @import 'bower_components/vui-colors/colors.scss';
 
+@mixin _vui-link-focus() {
+
+	color: $vui-color-celestuba;
+	text-decoration: underline;
+	outline-width: 0;
+
+}
+
 @mixin vui-link($font-weight: normal) {
 
 	&,
@@ -13,9 +21,7 @@
 	}
 	&:hover,
 	&:focus {
-		color: $vui-color-celestuba;
-		text-decoration: underline;
-		outline-width: 0;
+		@include _vui-link-focus;
 	}
 
 }

@@ -1,0 +1,32 @@
+@import 'bower_components/vui-typography/typography.scss';
+@import '../link.scss';
+
+html {
+	font-size: 20px;
+}
+body {
+	@include vui-typography();
+	margin: 1rem;
+}
+table {
+	max-width: 1000px;
+}
+td, th {
+	padding: 0.5rem;
+}
+td {
+	text-align: center;
+}
+
+.vui-link {
+	@include vui-link;
+}
+
+.vui-link-main {
+	@include vui-link-main;
+}
+
+.vui-link.vui-link-focus,
+.vui-link-main.vui-link-focus {
+	@include _vui-link-focus;
+}
