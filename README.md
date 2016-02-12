@@ -4,7 +4,7 @@
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][dependencies-image]][dependencies-url]
 
-This component contains [SASS mixins](http://sass-lang.com/) and CSS can be used to style links. It's best used in conjunction with the [VUI typography](https://github.com/Brightspace/valence-ui-typography) component.
+This component contains [SASS mixins](http://sass-lang.com/) and CSS which can be used to style links. It's best used in conjunction with the [VUI typography](https://github.com/Brightspace/valence-ui-typography) component.
 
 Links look like this:
 
