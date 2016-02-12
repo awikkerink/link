@@ -1,5 +1,6 @@
 @import 'bower_components/vui-typography/typography.scss';
 @import '../link.scss';
+@import '../link.css.scss';
 
 html {
 	font-size: 20px;
@@ -18,15 +19,17 @@ td {
 	text-align: center;
 }
 
-.vui-link {
-	@include vui-link;
+.on {
+	a {
+		@include vui-link();
+	}
+	a.main {
+		@include vui-link-main();
+	}
 }
-
-.vui-link-main {
-	@include vui-link-main;
-}
-
-.vui-link.vui-link-focus,
-.vui-link-main.vui-link-focus {
-	@include _vui-link-focus;
+.on a.focus,
+.on a.main.focus,
+a.vui-link.focus,
+a.vui-link-main.focus {
+	@include _vui-link-focus();
 }
