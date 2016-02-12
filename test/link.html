@@ -5,21 +5,21 @@
 		<link rel="stylesheet" type="text/css" href="test.css" />
 	</head>
 	<body>
-		<h1>Link</h1>
+		<h2>Link</h2>
 		<table>
 			<thead>
 				<tr>
 					<th></th>
 					<th></th>
 					<th>Normal</th>
-					<th>Hover/Focus</th>
+					<th>Focus</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr class="on">
 					<td>Normal</td>
 					<td>Mixin</td>
-					<td>
+					<td class="screenshot-overview">
 						<a href="http://www.google.com">Link Text</a>
 					</td>
 					<td>
@@ -58,5 +58,14 @@
 				</tr>
 			</tbody>
 		</table>
+		<h2>Screenshot</h2>
+		<p class="screenshot-normal" style="display:inline-block;">
+			<a class="vui-link">Normal Link</a>&nbsp;&nbsp;->&nbsp;&nbsp;
+			<a class="vui-link focus">Normal Link (hover/focus)</a>
+		</p><br />
+		<p class="screenshot-main" style="display:inline-block;">
+			<a class="vui-link-main">Main Link</a>&nbsp;&nbsp;->&nbsp;&nbsp;
+			<a class="vui-link-main focus">Main Link (hover/focus)</a>
+		</p>
 	</body>
 </html>
