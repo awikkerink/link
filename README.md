@@ -39,7 +39,7 @@ The native `<a>` element can now be extended to be a `vui-link`:
 
 Result:
 
-![screenshot of fields](/screenshots/normal.png?raw=true)
+![screenshot of fields](/screenshots/standard.png?raw=true)
 
 ### Main Links
 
