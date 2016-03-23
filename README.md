@@ -1,10 +1,8 @@
 # vui-link
 [![Bower version][bower-image]][bower-url]
-[![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
-[![Dependency Status][dependencies-image]][dependencies-url]
 
-This component contains [SASS mixins](http://sass-lang.com/) and CSS which can be used to style links. It's best used in conjunction with the [VUI typography](https://github.com/Brightspace/valence-ui-typography) component.
+A Valence UI, [Polymer](https://www.polymer-project.org/1.0/)-based web component link element.
 
 Links look like this:
 
@@ -18,36 +16,25 @@ For further information on this and other VUI components, see the docs at [ui.va
 ```shell
 bower install vui-link
 ```
-
-Or alternatively from [NPM][npm-url]:
-```shell
-npm install vui-link
-```
-
-Depending on which installation method you choose, use that path when doing the SASS import:
-
-```scss
-@import 'bower_components/vui-link/link.scss';
-// or...
-@import 'node_modules/vui-link/link.scss';
-```
-
 ## Usage
 
 ### Standard Links
 
-For most situations requiring a link, use the `vui-link()` mixin on a HTML `<a>` element.
+For most situations requiring a link:
 
-HTML:
+Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyfill (for browsers who don't natively support web components), then import `vui-link.html`:
+
 ```html
-<a>Normal Link</a>
+<head>
+	<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
+	<link rel="import" href="../vui-link/link.html">
+</head>
 ```
 
-SCSS:
-```scss
-a {
-	@include vui-link();
-}
+The native `<a>` element can now be extended to be a `vui-link`:
+
+```html
+<a href="foo.html" is="vui-link">Take me to Foo</a>
 ```
 
 Result:
@@ -56,23 +43,23 @@ Result:
 
 ### Main Links
 
-For links which require more emphasis, use the `vui-link-main()` mixin, which is typically applied using a class selector.
+For links which require more emphasis:
 
-HTML:
+Follow the steps above for a standard link and include the boolean attribute `main`.
+
 ```html
-<a class="main">Main Link</a>
-```
-
-SCSS:
-```scss
-a.main {
-	@include vui-link-main();
-}
+<a href="ultimate-foo.html" is="vui-link" main>Take me to the ultimate Foo!</a>
 ```
 
 Result:
 
 ![screenshot of fields](/screenshots/main.png?raw=true)
+
+## Running tests locally in Windows
+
+Tests in this repo use web-component-tester (WCT). Currently WCT has an issue in Windows with tests taking about a minute to start.  A workaround is to set two environment variables for Launchpad (a library used by WCT).  These help bypass browser searching which is what causes the delay.  For example:
+LAUNCHPAD_BROWSERS=CHROME
+LAUNCHPAD_CHROME-'C:\Program Files (x86)\Google\Chrome\Application'
 
 ## Coding styles
 
@@ -80,9 +67,5 @@ See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valenc
 
 [bower-url]: http://bower.io/search/?q=vui-link
 [bower-image]: https://img.shields.io/bower/v/vui-link.svg
-[npm-url]: https://npmjs.org/package/vui-link
-[npm-image]: https://img.shields.io/npm/v/vui-link.svg
 [ci-image]: https://travis-ci.org/Brightspace/valence-ui-link.svg?branch=master
 [ci-url]: https://travis-ci.org/Brightspace/valence-ui-link
-[dependencies-url]: https://david-dm.org/brightspace/valence-ui-link
-[dependencies-image]: https://img.shields.io/david/Brightspace/valence-ui-link.svg

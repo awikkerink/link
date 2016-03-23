@@ -1,0 +1,37 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../vui-colors/colors.html">
+<dom-module id="vui-link">
+	<template>
+		<style include="vui-colors"></style>
+		<style>
+			:host {
+				color: var(--vui-color-celestine);
+				font-weight: normal;
+				text-decoration: none;
+				cursor: pointer;
+			}
+			:host([main]) {
+				font-weight: 700;
+			}
+			:host(:hover), :host(:focus), :host(.vui-link-focus) {
+				color: var(--vui-color-celestuba);
+				text-decoration: underline;
+				outline-width: 0;
+			}
+		</style>
+		<content></content>
+	</template>
+	<script>
+		Polymer({
+			is: 'vui-link',
+			extends: 'a',
+			properties: {
+				main: {
+					type: Boolean,
+					reflectToAttribute: true,
+					value: false
+				}
+			}
+		});
+	</script>
+</dom-module>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Link Snapshot</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+		<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
+		<link rel="import" href="link.html.ignore">
+		<style>
+		@import 'https://fonts.googleapis.com/css?family=Lato:700,400,300';
+		html {
+			font-size: 20px;
+		}
+		body {
+			font-family: 'Lato', sans-serif;
+			margin: 1rem;
+		}
+		table {
+			max-width: 1000px;
+		}
+		td, th {
+			padding: 0.5rem;
+			white-space: nowrap;
+		}
+		td {
+			text-align: center;
+		}
+		</style>
+	</head>
+	<body unresolved>
+		<table>
+			<thead>
+				<tr>
+					<th>No State</th>
+					<th>Focused</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><a href="http://www.google.com" is="vui-link">Standard Link</a></td>
+					<td><a href="http://www.google.com" is="vui-link" class="vui-link-focus">Standard Link</a></td>
+				</tr>
+				<tr>
+					<td><a href="http://www.google.com" is="vui-link" main>Main Link</a></td>
+					<td><a href="http://www.google.com" is="vui-link" class="vui-link-focus" main>Main Link</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<p class="screenshot-overview" style="display:none;">
+			<a href="http://www.google.com" is="vui-link">Link Text</a>
+		</p>
+		<p class="screenshot-standard" style="display:none;">
+			<a href="http://www.google.com" is="vui-link">Standard Link</a> ->
+			<a href="http://www.google.com" is="vui-link" class="vui-link-focus">Standard Link (hover/focus)</a>
+		</p>
+		<p class="screenshot-main" style="display:none;">
+			<a href="http://www.google.com" is="vui-link" main>Main Link</a> ->
+			<a href="http://www.google.com" is="vui-link" main class="vui-link-focus">Main Link (hover/focus)</a>
+		</p>
+	</body>
+</html>

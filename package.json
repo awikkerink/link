@@ -1,18 +1,17 @@
 {
   "name": "vui-link",
-  "version": "1.1.1",
-  "description": "Mixins and CSS for applying link styles",
+  "version": "2.0.0",
+  "description": "Web component link element",
+  "private": true,
   "scripts": {
-    "clean": "rimraf *.css && rimraf ./test/*.css",
-    "prebuild": "npm run clean",
-    "build:sass:test": "node-sass --output-style expanded ./test/test.scss ./test/test.css",
-    "build:sass": "node-sass --output-style expanded link.css.scss link.css",
-    "build": "npm run build:sass && npm run build:sass:test",
-    "perceptual-diff": "percy snapshot test/",
+    "prebuild": "cpy link.html ./bower_components/temp",
+    "build": "vulcanize ./bower_components/temp/link.html > ./test/perceptual/link.html.ignore",
+    "postbuild": "rimraf ./bower_components/temp",
+    "preperceptual-diff": "npm run build",
+    "perceptual-diff": "percy snapshot test/perceptual --enable_javascript",
     "postinstall": "bower install",
     "screenshot": "phantomjs ./screenshots/build.js",
-    "pretest": "npm run build",
-    "test": "csslint link.css"
+    "test": "polylint && wct --skip-plugin sauce"
   },
   "repository": {
     "type": "git",
@@ -29,13 +28,13 @@
     "url": "https://github.com/Brightspace/valence-ui-link/issues"
   },
   "homepage": "https://github.com/Brightspace/valence-ui-link",
-  "dependencies": {
-    "bower": "^1.7.7"
-  },
   "devDependencies": {
-    "csslint": "^0.10.0",
-    "node-sass": "^3.4.2",
+    "bower": "^1.7.7",
+    "cpy-cli": "^1.0.0",
     "phantomjs-prebuilt": "^2.1.4",
-    "rimraf": "^2.5.1"
+    "polylint": "^2.10.0",
+    "rimraf": "^2.5.2",
+    "vulcanize": "^1.14.7",
+    "web-component-tester": "^4.2.2"
   }
 }
