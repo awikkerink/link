@@ -19,7 +19,7 @@ function capture(name) {
 
 }
 
-page.open('./test/link.html', function() {
+page.open('./test/perceptual/link.html', function() {
 	capture('overview');
 	capture('standard');
 	capture('main');
