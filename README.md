@@ -6,7 +6,7 @@ A Valence UI, [Polymer](https://www.polymer-project.org/1.0/)-based web componen
 
 Links look like this:
 
-![screenshot of fields](/screenshots/overview.png?raw=true)
+![example screenshot of link](/screenshots/overview.png?raw=true)
 
 For further information on this and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
@@ -22,7 +22,7 @@ bower install vui-link
 
 For most situations requiring a link:
 
-Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyfill (for browsers who don't natively support web components), then import `vui-link.html`:
+Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyfill (for browsers who don't natively support web components), then import `link.html`:
 
 ```html
 <head>
@@ -39,7 +39,7 @@ The native `<a>` element can now be extended to be a `vui-link`:
 
 Result:
 
-![screenshot of fields](/screenshots/standard.png?raw=true)
+![example screenshot of standard link](/screenshots/standard.png?raw=true)
 
 ### Main Links
 
@@ -53,7 +53,7 @@ Follow the steps above for a standard link and include the boolean attribute `ma
 
 Result:
 
-![screenshot of fields](/screenshots/main.png?raw=true)
+![example screenshot of main link](/screenshots/main.png?raw=true)
 
 ## Running tests locally in Windows
 
