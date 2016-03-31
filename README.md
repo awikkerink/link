@@ -1,3 +1,5 @@
+**Looking for SASS-based `vui-link`?** It's [over here](https://github.com/Brightspace/valence-ui-link/tree/sass).
+
 # vui-link
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
