@@ -2,32 +2,28 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Link Snapshot</title>
+		<title>VUI Link Snapshot</title>
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 		<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
-		<link rel="import" href="../link.html"> <!-- todo change to ignore filename when actually testing -->
-		<style>
-		@import 'https://fonts.googleapis.com/css?family=Lato:700,400,300';
-		html {
-			font-size: 20px;
-		}
-		body {
-			font-family: 'Lato', sans-serif;
-			margin: 1rem;
-		}
-		table {
-			max-width: 1000px;
-		}
-		td, th {
-			padding: 0.5rem;
-			white-space: nowrap;
-		}
-		td {
-			text-align: center;
-		}
+		<link rel="import" href="../../link.html"> <!-- CHANGE TO VULCANIZED copy needs typography -->
+		<link rel="import" href="../../../vui-typography/typography.html">
+		<style is="custom-style" include="vui-typography">
+			html {
+				font-size: 20px;
+			}
+			table {
+				max-width: 1000px;
+			}
+			td, th {
+				padding: 0.5rem;
+				white-space: nowrap;
+			}
+			td {
+				text-align: center;
+			}
 		</style>
 	</head>
-	<body unresolved>
+	<body class="vui-typography" unresolved>
 		<table>
 			<thead>
 				<tr>
@@ -46,9 +42,5 @@
 				</tr>
 			</tbody>
 		</table>
-		<p class="screenshot" style="display:none;">
-			<a href="http://www.google.com" is="vui-link">Standard Link</a>&nbsp;
-			<a href="http://www.google.com" is="vui-link" main>Main Link</a>
-		</p>
 	</body>
 </html>
