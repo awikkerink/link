@@ -19,9 +19,11 @@ function capture(name) {
 
 }
 
-page.open('./test/perceptual/link.html', function() {
-	capture('overview');
-	capture('standard');
-	capture('main');
-	phantom.exit();
+page.open('./demo/index.html', function() {
+	setTimeout(function() {
+		capture('overview');
+		capture('standard');
+		capture('main');
+		phantom.exit();
+	}, 1000);
 });
