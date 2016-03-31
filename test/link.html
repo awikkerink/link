@@ -1,71 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
-		<title>Link Sample</title>
-		<link rel="stylesheet" type="text/css" href="test.css" />
+		<meta charset="UTF-8">
+		<title>vui-link basic tests</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+		<script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+		<script src="../../web-component-tester/browser.js"></script>
+		<script src="../../iron-test-helpers/mock-interactions.js"></script>
+		<link rel="import" href="../link.html">
+		<style is="custom-style" include="vui-typography"></style>
 	</head>
 	<body>
-		<h2>Link</h2>
-		<table>
-			<thead>
-				<tr>
-					<th></th>
-					<th></th>
-					<th>Normal</th>
-					<th>Focus</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class="on">
-					<td>Normal</td>
-					<td>Mixin</td>
-					<td class="screenshot-overview">
-						<a href="http://www.google.com">Link Text</a>
-					</td>
-					<td>
-						<a class="focus" href="http://www.google.com">Link Text</a>
-					</td>
-				</tr>
-				<tr>
-					<td>Normal</td>
-					<td>Class</td>
-					<td>
-						<a class="vui-link" href="http://www.google.com">Link Text</a>
-					</td>
-					<td>
-						<a class="vui-link focus" href="http://www.google.com">Link Text</a>
-					</td>
-				</tr>
-				<tr class="on">
-					<td>Main</td>
-					<td>Mixin</td>
-					<td>
-						<a class="main" href="http://www.google.com">Link Text</a>
-					</td>
-					<td>
-						<a class="main focus" href="http://www.google.com">Link Text</a>
-					</td>
-				</tr>
-				<tr>
-					<td>Main</td>
-					<td>Class</td>
-					<td>
-						<a class="vui-link-main" href="http://www.google.com">Link Text</a>
-					</td>
-					<td>
-						<a class="vui-link-main focus" href="http://www.google.com">Link Text</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		<h2>Screenshot</h2>
-		<p class="screenshot-normal" style="display:inline-block;">
-			<a class="vui-link">Normal Link</a>&nbsp;&nbsp;->&nbsp;&nbsp;
-			<a class="vui-link focus">Normal Link (hover/focus)</a>
-		</p><br />
-		<p class="screenshot-main" style="display:inline-block;">
-			<a class="vui-link-main">Main Link</a>&nbsp;&nbsp;->&nbsp;&nbsp;
-			<a class="vui-link-main focus">Main Link (hover/focus)</a>
-		</p>
+		<test-fixture id="StandardLink">
+			<template>
+				<a is="vui-link">Link Test</a>
+			</template>
+		</test-fixture>
+		<test-fixture id="MainLink">
+			<template>
+				<a is="vui-link" main>Link Test</a>
+			</template>
+		</test-fixture>
+
+		<script>
+		describe('<vui-link>', function() {
+			var link;
+
+			describe('Standard link', function() {
+				beforeEach(function() {
+					link = fixture('StandardLink');
+				});
+
+				it('should execute onclick when clicked', function(done) {
+					link.addEventListener('click', function() {
+						done();
+					});
+					MockInteractions.tap(link);
+				});
+
+				it('should default "main" to false when unset', function() {
+					expect(link.main).to.be.false;
+				});
+
+				it('should reflect main attribute to property', function() {
+					link.setAttribute('main', '');
+					expect(link.main).to.be.true;
+				});
+
+				it('should add main attribute when property is true', function() {
+					link.main = true;
+					expect(link.hasAttribute('main')).to.be.true;
+				});
+			});
+
+			describe('Main Link', function() {
+				beforeEach(function() {
+					link = fixture('MainLink');
+				});
+
+				it('should set main property when attribute is present', function() {
+					expect(link.main).to.be.true;
+				});
+
+				it('should reflect main property when when attribute is removed', function() {
+					link.removeAttribute('main');
+					expect(link.main).to.be.false;
+				});
+
+				it('should remove main attribute when property is false', function() {
+					link.main = false;
+					expect(link.hasAttribute('main')).to.be.false;
+				});
+			});
+		});
+		</script>
 	</body>
 </html>

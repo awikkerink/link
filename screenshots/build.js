@@ -4,8 +4,9 @@ page.viewportSize = {width: 750, height: 1000};
 function capture(name) {
 
 	var clipRect = page.evaluate(function(n) {
-		return document.querySelector('.screenshot-' + n)
-			.getBoundingClientRect();
+		var screenshot = document.querySelector('.screenshot-' + n);
+		screenshot.style.display = 'inline-block';
+		return screenshot.getBoundingClientRect();
 	}, name);
 
 	page.clipRect = {
@@ -18,9 +19,11 @@ function capture(name) {
 
 }
 
-page.open('./test/link.html', function() {
-	capture('overview');
-	capture('normal');
-	capture('main');
-	phantom.exit();
+page.open('./demo/index.html', function() {
+	setTimeout(function() {
+		capture('overview');
+		capture('standard');
+		capture('main');
+		phantom.exit();
+	}, 1000);
 });
