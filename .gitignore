@@ -1,3 +1,3 @@
 bower_components/
 node_modules/
-test/perceptual/link.html.ignore
+test/perceptual/*.html.ignore

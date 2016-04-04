@@ -1,0 +1,41 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/vui-colors/colors.html">
+<dom-module id="vui-link">
+	<template>
+		<style include="vui-colors"></style>
+		<style>
+			:host, :host(:visited), :host(:active), :host(:link) {
+				color: var(--vui-color-celestine);
+				font-weight: normal;
+				text-decoration: none;
+				cursor: pointer;
+				@apply(--vui-link);
+			}
+			:host([main]) {
+				font-weight: 700;
+				@apply(--vui-link-main);
+			}
+			:host(:hover), :host(:focus), :host(.vui-link-focus) {
+				color: var(--vui-color-celestuba);
+				text-decoration: underline;
+				outline-width: 0;
+				@apply(--vui-link-hover);
+			}
+		</style>
+		<content></content>
+	</template>
+	<script>
+		//console.log('Start of link script before register');
+		TESTREG({ // normally Polymer call
+			is: 'vui-link',
+			extends: 'a',
+			properties: {
+				main: {
+					type: Boolean,
+					reflectToAttribute: true,
+					value: false
+				}
+			}
+		});
+	</script>
+</dom-module>

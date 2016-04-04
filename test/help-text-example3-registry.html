@@ -1,0 +1,20 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="small-text-example3-registry.html">
+
+<dom-module id="vui-help-text">
+	<template>
+		<style include="vui-colors">
+
+			:host {
+				@apply(--vui-small-text);
+			}
+
+		</style>
+		<content></content>
+	</template>
+	<script>
+		TESTREG({ // normally Polymer
+			is: 'vui-help-text'
+		});
+	</script>
+</dom-module>
