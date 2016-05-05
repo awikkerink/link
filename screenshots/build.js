@@ -24,6 +24,7 @@ page.open('./demo/index.html', function() {
 		capture('overview');
 		capture('standard');
 		capture('main');
+		capture('small');
 		phantom.exit();
 	}, 1000);
 });

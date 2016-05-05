@@ -15,6 +15,13 @@
 				font-weight: 700;
 				@apply(--vui-link-main);
 			}
+			:host([small]) {
+				font-size: 0.7rem;
+				font-weight: 400;
+				line-height: 1rem;
+				letter-spacing: 0.02rem;
+				@apply(--vui-link-small);
+			}
 			:host(:hover), :host(:focus), :host(.vui-link-focus) {
 				color: var(--vui-color-celestuba);
 				text-decoration: underline;
@@ -30,6 +37,11 @@
 			extends: 'a',
 			properties: {
 				main: {
+					type: Boolean,
+					reflectToAttribute: true,
+					value: false
+				},
+				small: {
 					type: Boolean,
 					reflectToAttribute: true,
 					value: false
