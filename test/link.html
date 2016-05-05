@@ -72,6 +72,26 @@
 					expect(link.hasAttribute('main')).to.be.false;
 				});
 			});
+
+			describe('Small Link', function() {
+				beforeEach(function() {
+					link = fixture('SmallLink');
+				});
+
+				it('should set small property when attribute is present', function() {
+					expect(link.small).to.be.true;
+				});
+
+				it('should reflect small property when when attribute is removed', function() {
+					link.removeAttribute('small');
+					expect(link.main).to.be.false;
+				});
+
+				it('should remove small attribute when property is false', function() {
+					link.small = false;
+					expect(link.hasAttribute('small')).to.be.false;
+				});
+			});
 		});
 		</script>
 	</body>
