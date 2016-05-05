@@ -1,6 +1,6 @@
 {
   "name": "vui-link",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Web component link element",
   "private": true,
   "scripts": {
