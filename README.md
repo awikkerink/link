@@ -57,6 +57,16 @@ Result:
 
 ![example screenshot of main link](/screenshots/main.png?raw=true)
 
+### Small Links
+
+For links that should take up less space:
+
+Follow the steps above for a standard link and include the boolean attribute `small`.
+
+```html
+<a href="small-foo.html" is="vui-link" small>This way to Foo</a>
+```
+
 ## Running tests locally in Windows
 
 Tests in this repo use web-component-tester (WCT). Currently WCT has an issue in Windows with tests taking about a minute to start.  A workaround is to set two environment variables for Launchpad (a library used by WCT).  These help bypass browser searching which is what causes the delay.  For example:
