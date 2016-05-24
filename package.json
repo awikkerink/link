@@ -5,11 +5,10 @@
   "private": true,
   "scripts": {
     "prebuild": "cpy link.html ./bower_components/temp && cpy ./test/link-vulcanize-index.html ./bower_components/temp",
-    "build": "vulcanize ./bower_components/temp/link-vulcanize-index.html > ./test/perceptual/link.html.ignore",
+    "build": "vulcanize ./bower_components/temp/link-vulcanize-index.html > ./demo/link.html.ignore",
     "postbuild": "rimraf ./bower_components/temp",
-    "preperceptual-diff": "npm run build",
-    "perceptual-diff": "percy snapshot test/perceptual --enable_javascript",
     "postinstall": "bower install",
+    "prescreenshot": "npm run build",
     "screenshot": "phantomjs ./screenshots/build.js",
     "test": "polylint && wct --skip-plugin sauce"
   },
