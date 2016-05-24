@@ -1,12 +1,8 @@
 language: node_js
 node_js: stable
-before_script:
-- gem install percy-cli
 script:
 - polylint
 - wct --skip-plugin local
-after_success:
-- '[ "$TRAVIS_SECURE_ENV_VARS" = "true" ] && npm run perceptual-diff'
 sudo: false
 addons:
   sauce_connect:
@@ -14,6 +10,3 @@ addons:
       secure: "RfbZ+mVqot+jOA4F1USsBzAkjF558wCWNyNg82P838FUU+9rz5h4aUvD5tmKF/3Ha/Z1Q4c7kZOhJovjf7xYjqSRK7TUvdmo/qwzLa/srjsJh1tBO+Gt4z7Gzk+BKUmu+oGjxg/7jkcuqiuPT4a/ntZsbdV4kc4NIP/J3zBoV7A="
     access_key:
       secure: "Jlb3qw8bJsXiBG2fn7x6b9xs6u0nPCtu80XgsGhk3lW92CEb5DQ1Eso1HTuxcvUS1qd7JHHfaJm3M9PxBw+DgXpnsC7p/uaJDdw2vonzJb++yTEOviaZPnqkrK05UF2ZzWIVsh51bjILSIfYczJQtw0Rjx2ORJVyp6ce9f5Y4I8="
-env:
-  global:
-    secure: bil9iZPlfnF6350dkkGSHE3mzON2wPTSwKP9mYnWkKCcyuPXNSyCRIBwHDwLvxRRr+Bkr0/6tpJkZiJYktt6BZMMQHSvAJ3JjnLz5emPt8IqeH8U/EmHHPu/kX7Lq445x5VIRaEUj1WKAkjyOqZyHj21mJXTZFx8pK2our5PYS4=
