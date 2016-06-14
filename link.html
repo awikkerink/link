@@ -1,11 +1,10 @@
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../vui-colors/colors.html">
+<link rel="import" href="../d2l-colors/d2l-colors.html">
 <dom-module id="vui-link">
 	<template>
-		<style include="vui-colors"></style>
-		<style>
+		<style include="d2l-colors">
 			:host, :host(:visited), :host(:active), :host(:link) {
-				color: var(--vui-color-celestine);
+				color: var(--d2l-color-celestine);
 				font-weight: normal;
 				text-decoration: none;
 				cursor: pointer;
@@ -23,7 +22,7 @@
 				@apply(--vui-link-small);
 			}
 			:host(:hover), :host(:focus), :host(.vui-link-focus) {
-				color: var(--vui-color-celestuba);
+				color: var(--d2l-color-celestuba);
 				text-decoration: underline;
 				outline-width: 0;
 				@apply(--vui-link-hover);
