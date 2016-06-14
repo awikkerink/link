@@ -5,7 +5,6 @@ function capture(name) {
 
 	var clipRect = page.evaluate(function(n) {
 		var screenshot = document.querySelector('.screenshot-' + n);
-		screenshot.style.display = 'inline-block';
 		return screenshot.getBoundingClientRect();
 	}, name);
 
@@ -19,7 +18,7 @@ function capture(name) {
 
 }
 
-page.open('./demo/index.html', function() {
+page.open('./screenshots/index.html', function() {
 	setTimeout(function() {
 		capture('overview');
 		capture('standard');

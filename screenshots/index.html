@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Link Demo</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+		<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
+		<link rel="import" href="link.ignore.html">
+		<style>
+			@import url(https://s.brightspace.com/lib/fonts/0.3.0/fonts.css);
+			html {
+				font-size: 20px;
+			}
+			body {
+				font-family: 'Lato', sans-serif;
+				line-height: 1.5;
+			}
+		</style>
+	</head>
+	<body unresolved>
+		<p class="screenshot-overview">
+			<a href="http://www.google.com" is="d2l-link">Link Text</a>
+		</p>
+		<p class="screenshot-standard">
+			<a href="http://www.google.com" is="d2l-link">Standard Link</a> ->
+			<a href="http://www.google.com" is="d2l-link" class="d2l-link-focus">Standard Link (hover/focus)</a>
+		</p>
+		<p class="screenshot-main">
+			<a href="http://www.google.com" is="d2l-link" main>Main Link</a> ->
+			<a href="http://www.google.com" is="d2l-link" main class="d2l-link-focus">Main Link (hover/focus)</a>
+		</p>
+		<p class="screenshot-small">
+			<a href="http://www.google.com" is="d2l-link" small>Small Link</a> ->
+			<a href="http://www.google.com" is="d2l-link" small class="d2l-link-focus">Small Link (hover/focus)</a>
+		</p>
+	</body>
+</html>

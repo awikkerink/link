@@ -1,22 +1,22 @@
-**Looking for SASS-based `vui-link`?** It's [over here](https://github.com/Brightspace/valence-ui-link/tree/sass).
+**Looking for SASS-based `d2l-link`?** It's [over here](https://github.com/Brightspace/d2l-link-ui/tree/sass).
 
-# vui-link
+# d2l-link
 [![Bower version][bower-image]][bower-url]
 [![Build status][ci-image]][ci-url]
 
-A Valence UI, [Polymer](https://www.polymer-project.org/1.0/)-based web component link element.
+A [Polymer](https://www.polymer-project.org/1.0/)-based web component D2L link element.
 
 Links look like this:
 
 ![example screenshot of link](/screenshots/overview.png?raw=true)
 
-For further information on this and other VUI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
+For further information on this and other D2L UI components, see the docs at [ui.valence.d2l.com](http://ui.valence.d2l.com/).
 
 ## Installation
 
-`vui-link` can be installed from [Bower][bower-url]:
+`d2l-link` can be installed from [Bower][bower-url]:
 ```shell
-bower install vui-link
+bower install d2l-link
 ```
 ## Usage
 
@@ -24,19 +24,19 @@ bower install vui-link
 
 For most situations requiring a link:
 
-Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyfill (for browsers who don't natively support web components), then import `link.html`:
+Include the [webcomponents.js](http://webcomponents.org/polyfills/) "lite" polyfill (for browsers who don't natively support web components), then import `d2l-link.html`:
 
 ```html
 <head>
 	<script src="https://s.brightspace.com/lib/webcomponentsjs/0.7.21/webcomponents-lite.min.js"></script>
-	<link rel="import" href="../vui-link/link.html">
+	<link rel="import" href="../d2l-link/d2l-link.html">
 </head>
 ```
 
-The native `<a>` element can now be extended to be a `vui-link`:
+The native `<a>` element can now be extended to be a `d2l-link`:
 
 ```html
-<a href="foo.html" is="vui-link">Take me to Foo</a>
+<a href="foo.html" is="d2l-link">Take me to Foo</a>
 ```
 
 Result:
@@ -50,7 +50,7 @@ For links which require more emphasis:
 Follow the steps above for a standard link and include the boolean attribute `main`.
 
 ```html
-<a href="ultimate-foo.html" is="vui-link" main>Take me to the ultimate Foo!</a>
+<a href="ultimate-foo.html" is="d2l-link" main>Take me to the ultimate Foo!</a>
 ```
 
 Result:
@@ -64,7 +64,7 @@ For links that should take up less space:
 Follow the steps above for a standard link and include the boolean attribute `small`.
 
 ```html
-<a href="small-foo.html" is="vui-link" small>This way to Foo</a>
+<a href="small-foo.html" is="d2l-link" small>This way to Foo</a>
 ```
 
 ## Running tests locally in Windows
@@ -75,9 +75,9 @@ LAUNCHPAD_CHROME-'C:\Program Files (x86)\Google\Chrome\Application'
 
 ## Coding styles
 
-See the [VUI Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on VUI naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
+See the [Best Practices & Style Guide](https://github.com/Brightspace/valence-ui-docs/wiki/Best-Practices-&-Style-Guide) for information on naming conventions, plus information about the [EditorConfig](http://editorconfig.org) rules used in this repo.
 
-[bower-url]: http://bower.io/search/?q=vui-link
-[bower-image]: https://img.shields.io/bower/v/vui-link.svg
-[ci-image]: https://travis-ci.org/Brightspace/valence-ui-link.svg?branch=master
-[ci-url]: https://travis-ci.org/Brightspace/valence-ui-link
+[bower-url]: http://bower.io/search/?q=d2l-link
+[bower-image]: https://img.shields.io/bower/v/d2l-link.svg
+[ci-image]: https://travis-ci.org/Brightspace/d2l-link-ui.svg?branch=master
+[ci-url]: https://travis-ci.org/Brightspace/d2l-link-ui
