@@ -3,12 +3,7 @@
   "description": "Polymer-based web component for a D2L link",
   "private": true,
   "scripts": {
-    "prebuild": "cpy d2l-link.html ./bower_components/temp && cpy ./screenshots/link-vulcanize-index.html ./bower_components/temp",
-    "build": "vulcanize ./bower_components/temp/link-vulcanize-index.html > ./screenshots/link.ignore.html",
-    "postbuild": "rimraf ./bower_components/temp",
     "postinstall": "bower install",
-    "prescreenshot": "npm run build",
-    "screenshot": "phantomjs ./screenshots/build.js",
     "test": "polylint && wct --skip-plugin sauce"
   },
   "repository": {
@@ -23,11 +18,7 @@
   "homepage": "https://github.com/Brightspace/d2l-link-ui",
   "devDependencies": {
     "bower": "^1.7.7",
-    "cpy-cli": "^1.0.0",
-    "phantomjs-prebuilt": "^2.1.4",
     "polylint": "^2.10.0",
-    "rimraf": "^2.5.2",
-    "vulcanize": "^1.14.7",
     "web-component-tester": "^4.2.2"
   }
 }
