@@ -31,6 +31,7 @@
 			var link;
 
 			describe('Standard link', function() {
+
 				beforeEach(function() {
 					link = fixture('StandardLink');
 				});
@@ -55,9 +56,16 @@
 					link.main = true;
 					expect(link.hasAttribute('main')).to.be.true;
 				});
+
+				it('should have a 300 font weight', function() {
+					var style = window.getComputedStyle(link);
+					expect(style.fontWeight).to.eql('300');
+				});
+
 			});
 
 			describe('Main Link', function() {
+
 				beforeEach(function() {
 					link = fixture('MainLink');
 				});
@@ -75,9 +83,17 @@
 					link.main = false;
 					expect(link.hasAttribute('main')).to.be.false;
 				});
+
+				it('should have a bold (700) font weight', function() {
+					var style = window.getComputedStyle(link);
+					var isBold = style.fontWeight === 'bold' || style.fontWeight === '700';
+					expect(isBold).to.be.true;
+				});
+
 			});
 
 			describe('Small Link', function() {
+
 				beforeEach(function() {
 					link = fixture('SmallLink');
 				});
@@ -95,6 +111,13 @@
 					link.small = false;
 					expect(link.hasAttribute('small')).to.be.false;
 				});
+
+				it('should have a normal (400) font weight', function() {
+					var style = window.getComputedStyle(link);
+					var isNormal = style.fontWeight === 'normal' || style.fontWeight === '400';
+					expect(isNormal).to.be.true;
+				});
+
 			});
 		});
 		</script>
