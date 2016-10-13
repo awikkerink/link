@@ -3,7 +3,6 @@ node_js: stable
 script:
 - polylint
 - wct --skip-plugin local
-sudo: false
 addons:
   sauce_connect:
     username:

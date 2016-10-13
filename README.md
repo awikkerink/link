@@ -1,4 +1,4 @@
-**Looking for SASS-based `d2l-link`?** It's [over here](https://github.com/Brightspace/d2l-link-ui/tree/sass).
+**Looking for SASS-based `d2l-link`?** It's [over here](https://github.com/BrightspaceUI/link/tree/sass).
 
 # d2l-link
 [![Bower version][bower-image]][bower-url]
@@ -79,5 +79,5 @@ See the [Best Practices & Style Guide](https://github.com/Brightspace/valence-ui
 
 [bower-url]: http://bower.io/search/?q=d2l-link
 [bower-image]: https://img.shields.io/bower/v/d2l-link.svg
-[ci-image]: https://travis-ci.org/Brightspace/d2l-link-ui.svg?branch=master
-[ci-url]: https://travis-ci.org/Brightspace/d2l-link-ui
+[ci-image]: https://travis-ci.org/BrightspaceUI/link.svg?branch=master
+[ci-url]: https://travis-ci.org/BrightspaceUI/link
