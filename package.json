@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Brightspace/d2l-link-ui.git"
+    "url": "https://github.com/BrightspaceUI/link.git"
   },
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Brightspace/d2l-link-ui/issues"
+    "url": "https://github.com/BrightspaceUI/link/issues"
   },
-  "homepage": "https://github.com/Brightspace/d2l-link-ui",
+  "homepage": "https://github.com/BrightspaceUI/link",
   "devDependencies": {
     "bower": "^1.7.7",
     "polylint": "^2.10.0",
